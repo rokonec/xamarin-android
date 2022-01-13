@@ -153,6 +153,24 @@ installing app bundles.
 
 This build action was introduced in Xamarin.Android 11.3.
 
+## AndroidNamespaceReplacement
+
+In Android Bindings projects, a common desire is to replace Java package names
+with namespace names that fit established .NET conventions.  This can be done in bulk
+using `<AndroidNamespaceReplacement>`.
+
+For example:
+
+```xml
+<AndroidNamespaceReplacement Include="com.xamarin.androidx" Replacement="Xamarin.AndroidX" />
+```
+
+Would update all package names like `com.xamarin.androidx.core` to `Xamarin.AndroidX.Core`.
+
+The full spec is available [here](https://github.com/xamarin/java.interop/wiki/Renaming-Namespaces).
+
+This build item was introduced in Xamarin.Android 12.3.
+
 ## AndroidNativeLibrary
 
 [Native libraries](~/android/platform/native-libraries.md)
